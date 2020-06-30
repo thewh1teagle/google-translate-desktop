@@ -1,6 +1,9 @@
-# google-translate-desktop
+# Google-Translate-Desktop
 
-## A simple desktop app for google translate
+## Desktop app for google translate
+
+![tamazight-on-google-1557988729](https://user-images.githubusercontent.com/61390950/86091072-f45efe80-bab3-11ea-8804-23eac263f2d1.jpg)
+
 
 ## Supporting Platforms
 
@@ -13,20 +16,18 @@
 
 
 ## Requirements
-- nodejs
-
-- electron-packager
+- Nodejs
 
 
 ## Build instruction
 
-first, install electron-packager and required libs
+First, install electron-packager and required libs
 ```npm
 npm install electron-packager -g
 npm install 
 ```
 
-then build for your platform
+Then, build for your platform
 
 ### MacOs
 ```
