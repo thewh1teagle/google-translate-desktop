@@ -1,0 +1,23 @@
+{
+  "productName": "Google translate",
+  "version": "1.0.0",
+  "description": "A simple google translate desktop app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "",
+  "keywords": [
+    "Electron"
+  ],
+  "author": "thewh1teagle",
+  "license": "",
+  "devDependencies": {
+    "electron": "^9.0.0",
+    "electron-packager": "^15.0.0",
+    "electron-winstaller": "^4.0.0"
+  },
+  "dependencies": {
+    "electron-localshortcut": "^3.2.1"
+  }
+}

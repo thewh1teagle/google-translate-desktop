@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <!-- <link rel="stylesheet" href="assets/css/no-topbar.css"> -->
+        <script src="../assets/js/webview.js"></script>
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'; object-src 'self'";>
+    </head>
+    <body>
+        
+
+        <!-- Webview -->
+        <webview id="webview" autosize="on" src="https://translate.google.com/" data-home="https://translate.google.com/"></webview>
+        <script src="../assets/js/darkmode-js.min.js"></script>
+        <script>
+       var options = {
+            time: '0.5s', // default: '0.3s'
+            mixColor: '#fff', // default: '#fff'
+            backgroundColor: '#fff',  // default: '#fff'
+            buttonColorDark: '#fff',  // default: '#100f2c'
+            buttonColorLight: '#fff', // default: '#fff'
+            saveInCookies: true, // default: true,
+            label: 'Dark mode', // default: ''
+            autoMatchOsTheme: true // default: true
+        }
+        
+        const darkmode = new Darkmode(options);
+        darkmode.showWidget();
+        </script>
+    </body>
+</html>
