@@ -131,19 +131,7 @@ app.on("ready", () => {
   });
 
 
-  // local shortcuts
   
-    electronLocalshortcut.register(mainWindow, 'Ctrl+Q', () => {
-      app.quit()
-    });
-
-    electronLocalshortcut.register(mainWindow, 'F11', () => {
-      if (mainWindow.isFullScreen()) {
-        mainWindow.setFullScreen(false);
-      } else {
-        mainWindow.setFullScreen(true);
-      }
-    });
 
 
     /*
@@ -166,7 +154,7 @@ app.on("ready", () => {
       zoomFactor: 1.0,
       enableRemoteModule: true,
     },
-    show: false,
+    show: true,
     fullscreen: true
   })
 
@@ -176,6 +164,20 @@ app.on("ready", () => {
     app.quit()
   })
 
+
+  // local shortcuts
+  
+electronLocalshortcut.register(mainWindow, 'Ctrl+Q', () => {
+  app.quit()
+});
+
+electronLocalshortcut.register(mainWindow, 'F11', () => {
+  if (mainWindow.isFullScreen()) {
+    mainWindow.setFullScreen(false);
+  } else {
+    mainWindow.setFullScreen(true);
+  }
+});
 
 
 
@@ -194,22 +196,18 @@ mainWindow.on("ready-to-show", () => {
 
 
 // display splash screen
+splashWindow.setMenu(null)
+splashWindow.show()
 splashWindow.loadURL("file://" + __dirname + "/views/splash.html");
-splashWindow.on("ready-to-show", () => {
-  splashWindow.setMenu(null)
-  splashWindow.show()
-})
 
 
-
-mainWindow.once('ready-to-show', () => {
-  
-  setTimeout(() => {
+setTimeout(() => {
+    mainWindow.show()
     mainWindow.maximize()
-    splashWindow.hide();     
-  }, 1500);
-    
-});
+    splashWindow.destroy()  
+   // mainWindow.maximize()
+}, 1500);
+
   
 
 
@@ -229,3 +227,6 @@ app.on("window-all-closed", () => {
   fs.writeFileSync(initPath, JSON.stringify(data));
   app.quit();
 });
+
+
+
