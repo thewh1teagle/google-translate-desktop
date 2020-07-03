@@ -1,8 +1,10 @@
 <html>
     <head>
         <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/urban.css">
         <!-- <link rel="stylesheet" href="assets/css/no-topbar.css"> -->
         <script src="../assets/js/webview.js"></script>
+        
         <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'; object-src 'self'";>
     </head>
     <body>
@@ -10,6 +12,13 @@
 
         <!-- Webview -->
         <webview id="webview" autosize="on" src="https://translate.google.com/" data-home="https://translate.google.com/"></webview>
+        <a id="urban-fixed-btn" href="#urban-tarea">Urban dictionary</a>
+        
+        <div class="div-urban">
+            <input type="text" id="input-urban">
+            <button id="urban-btn">Translate</button>
+            <textarea name="" id="urban-tarea" cols="30" rows="10"></textarea>
+        </div>
         <script src="../assets/js/darkmode-js.min.js"></script>
         <script>
        var options = {
@@ -26,5 +35,6 @@
         const darkmode = new Darkmode(options);
         darkmode.showWidget();
         </script>
+        <script src="../assets/js/urban.js"></script>
     </body>
 </html>
