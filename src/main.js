@@ -213,7 +213,7 @@ setTimeout(() => {
 
 
   // Display Dev Tools
-   mainWindow.openDevTools();
+  // mainWindow.openDevTools();
 
   const menu = Menu.buildFromTemplate(template);
   Menu.setApplicationMenu(menu);

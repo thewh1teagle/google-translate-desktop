@@ -1,17 +1,20 @@
 var urban = require('urban')
 
 
-const uinput = document.getElementById("input-urban")
-const ubutton = document.getElementById("urban-btn")
-const utarea = document.getElementById("urban-tarea")
+const uinput = document.getElementsByClassName("urban-input")[0]
+const ubutton = document.getElementsByClassName("urban-button")[0]
+const utarea = document.getElementsByClassName("translated-div")[0]
 
 
 ubutton.addEventListener("click", () => {
     var text = uinput.value
     trollface = urban(text);    
     trollface.first(function(json) {
-        utarea.value = json['definition']
+        utarea.innerHTML = json['definition']
+        utarea.scrollIntoView();
     });
+    document.activeElement.blur();
+    
 })
 
 

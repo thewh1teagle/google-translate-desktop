@@ -1,7 +1,56 @@
-#urban-fixed-btn {
-    position: fixed;
-    bottom: 0px;
-    right: 0px; 
-    border: 1px solid blue;
-    background-color: white;
+/* * {
+    outline: 1px solid red;
+} */
+
+.urban-container {
+    display: block;
+    position: relative;
+    background-color:#F0FFFF;
+    padding: 5px;
 }
+
+
+.urban-input {
+    width: 200px;
+    height: 50px;
+    font-size: 100%;
+    line-height: 100%;
+    border-radius: 5px;
+}
+
+.urban-button {
+    height: 50px;
+    margin-left: 5px;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: large;
+}
+
+.translated-div-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.translated-div:empty { 
+    display: none 
+}
+
+.translated-div {
+    display: block;
+    background-color: burlywood;
+    max-width: 400px;
+    max-height: 100px;
+    overflow-y: scroll;
+    margin: auto;
+    padding: 20px;
+    margin-top: 10px;
+    font-size: large;
+}
+
+.urban-title {
+    text-align: center;
+    margin: 5px;
+    font-style: Arial;
+    font-size: 50px;
+}
+
