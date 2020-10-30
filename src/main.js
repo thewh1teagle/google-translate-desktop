@@ -158,6 +158,7 @@ app.on("ready", () => {
     fullscreen: true
   })
 
+  
 
 
   mainWindow.on("close", () => {
@@ -196,7 +197,7 @@ mainWindow.on("ready-to-show", () => {
 
 
 // display splash screen
-splashWindow.setMenu(null)
+// splashWindow.setMenu(null)
 splashWindow.show()
 splashWindow.loadURL("file://" + __dirname + "/views/splash.html");
 
