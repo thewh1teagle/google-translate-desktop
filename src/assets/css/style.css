@@ -5,4 +5,5 @@ body {
   padding: 0;
   -webkit-user-select: none;
   -webkit-app-region: drag;
+    overflow-x: hidden;
 }
