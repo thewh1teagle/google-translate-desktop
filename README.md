@@ -2,7 +2,8 @@
 
 ## Desktop app for google translate
 
-![tamazight-on-google-1557988729](https://user-images.githubusercontent.com/61390950/86091072-f45efe80-bab3-11ea-8804-23eac263f2d1.jpg)
+
+![ezgif-6-d1b19fd03ed6](https://user-images.githubusercontent.com/61390950/97719758-23bc6100-1ad0-11eb-986e-8b012b01f15f.gif)
 
 
 ## Supporting Platforms
