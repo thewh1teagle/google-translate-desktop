@@ -24,7 +24,7 @@
 
 First, install electron-packager and required libs
 ```npm
-npm install electron-packager -g
+npm install electron-packager
 npm install 
 ```
 
@@ -32,26 +32,26 @@ Then, build for your platform
 
 ### MacOs
 ```
-electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/translate.png --prune=true --out=release-builds
+node_modules/.bin/electron-packager . --overwrite --platform=darwin --arch=x64 --icon=assets/icons/translate.png --prune=true --out=release-builds
 ```
 
 ### Windows
 
 #### Windows Portable app
 ```shell
-electron-packager . google-translate-desktop --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/translate.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName="Google translate app"
+node_modules/.bin/electron-packager . google-translate-desktop --overwrite --asar=true --platform=win32 --arch=ia32 --icon=assets/icons/translate.ico --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName="Google translate app"
 ```
 
 #### Windows Installer
 ```
-npm install -g electron-installer-windows
-electron-packager . app --platform win32 --arch x64 --out dist/
-electron-installer-windows --src dist/app-win32-x64/ --dest dist/installers/
+npm install electron-installer-windows
+node_modules/.bin/electron-packager . app --platform win32 --arch x64 --out dist/
+node_modules/.bin/electron-installer-windows --src dist/app-win32-x64/ --dest dist/installers/
 
 ```
 
 
 ### Linux
 ```shell
-electron-packager . google-translate-desktop --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/translate.png --prune=true --out=release-builds
+node_modules/.bin/electron-packager . google-translate-desktop --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/translate.png --prune=true --out=release-builds
 ```
